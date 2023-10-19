@@ -1,0 +1,115 @@
+.header {
+    padding: 35px 0;
+}
+
+.header__container {
+    @include flexB;
+}
+
+.header__logo_img {
+    max-width: 122px;
+}
+
+.header__nav {
+    @include flexB;
+    gap: 146px
+}
+
+.header__list {
+    @include flexB;
+    gap: 40px;
+
+}
+
+.header__link {
+    color: #282B22;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.header__socials {
+    @include flexB;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header__btn_block{
+    display: flex;
+    align-items: center;
+}
+
+.header__menu {
+    display: none;
+    width: 34px;
+    height: 34px;
+    background-repeat: no-repeat;
+    background: transparent;
+    border: none;
+    background-image: url("../img/burger-menu.svg");
+}
+
+.header__phone_number {
+    color: #3D4A39;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 100%;
+
+    &::before {
+        content: "";
+        width: 22px;
+        height: 22px;
+        vertical-align: middle;
+        display: inline-block;
+        margin-right: 7px;
+        background-repeat: no-repeat;
+        background-image: url("../img/phone-icon.svg");
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .header__nav {
+        gap: 51px;
+        margin-left: 40px;
+    }
+    .header__list{
+        gap: 20px;
+    }
+
+    .header__menu{
+        margin-left: 40px;
+    }
+    
+}
+
+@media screen and (max-width: 926px) {
+    .header__list{
+        display: none;
+    }
+    .header__nav{
+        margin-left: auto;
+    }
+    .header__socials{
+        margin-right: 15px;
+    }
+    .header__menu{
+        display: inline-block;
+    }
+
+}
+
+@media screen and (max-width: 530px) {
+    .header__logo_img {
+        max-width: 100px;
+    }
+    .header__socials{
+        display: none;
+    }
+    .header__phone_number{
+        display: none;
+    }
+}
