@@ -12,7 +12,16 @@
     font-weight: 600;
     line-height: 125%;
     text-transform: uppercase;
+
+    @media screen and (max-width: 640px) {
+        font-size: 36px;
+    }
+
+    @media screen and (max-width: 576px) {
+        font-size: 24px;
+    }
 }
+
 
 @mixin mainButton{
     color: #fff;

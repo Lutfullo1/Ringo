@@ -1,0 +1,135 @@
+.table {
+    padding-top: 140px;
+}
+
+.table__title1 {
+    @include mainTitle;
+}
+
+.table__block {
+    border-top: 1px solid #282B22;
+    border-bottom: 1px solid #282B22;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.table__item1 {
+    padding-top: 50px;
+
+    &::before {
+        content: "01";
+        color: #282B22;
+        font-family: 'Raleway', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 100%;
+        opacity: 0.3;
+    }
+
+    // &:nth-child(3)::before {
+    //     content: "02";
+    // }
+
+    // &:nth-child(5)::before {
+    //     content: "03";
+    // }
+
+    // &:nth-child(7)::before {
+    //     content: "04";
+    // }
+
+    // &:nth-child(9)::before {
+    //     content: "05";
+    // }
+}
+
+.table__item2 {
+    padding: 50px 40px;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 1px;
+        height: 68%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: #282B22;
+    }
+}
+
+.table__title {
+    color: #282B22;
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 10px;
+}
+
+.table__text {
+    color: #282B22;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 135%;
+}
+
+.table__item1,
+.table__item2:not(:last-child) {
+    border-bottom: 1px solid #282B22;
+}
+
+@media screen and (max-width: 615px) {
+    .table__block {
+        grid-template-columns: 1fr;
+    }
+
+    .table__item1 {
+        display: none;
+    }
+
+    .table__item2 {
+        padding: 30px 10px;
+
+        &::before {
+            content: none;
+        }
+    }
+
+    .table__title {
+
+        &::before {
+            content: "01";
+            color: #282B22;
+            font-family: 'Raleway', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 100%;
+            opacity: 0.3;
+            display: inline-block;
+            margin-right: 13px;
+        }
+
+        &:nth-child(2)::before {
+            content: "02";
+        }
+
+        &:nth-child(3)::before {
+            content: "03";
+        }
+
+        &:nth-child(4)::before {
+            content: "04";
+        }
+
+        &:nth-child(5)::before {
+            content: "05";
+        }
+
+    }
+
+    .table__text {
+        margin-left: 40px;
+    }
+}

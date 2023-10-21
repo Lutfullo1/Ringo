@@ -1,0 +1,112 @@
+.project {
+    padding-top: 100px;
+}
+
+.project__wrapper {
+    padding-top: 40px;
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 160px;
+        height: 200px;
+        left: 0;
+        top: 0;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-image: url('../img/project-img.jpg');
+    }
+
+    &::after {
+        content: "";
+        width: 160px;
+        height: 200px;
+        right: 10px;
+        bottom: 96px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-image: url('../img/project-img.jpg');
+    }
+}
+
+.project__title {
+    max-width: 814px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    color: #282B22;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 130%;
+}
+
+.project__content_block {
+    border-bottom: 1px solid #282B22;
+}
+
+.project__block {
+    max-width: 926px;
+    border-top: 1px solid #282B22;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 1px;
+        height: 100%;
+        background-color: #282B22;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.project__content {
+    padding: 34px 60px 35px 33px;
+}
+
+.project__content2 {
+    margin-left: 93px;
+}
+
+@media screen and (max-width: 1250px) {
+    .project__wrapper {
+
+        &::before {
+            content: none;
+        }
+
+        &::after {
+            content: none;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .project__title{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .project__block {
+        flex-direction: column;
+
+        &::before {
+            content: none;
+        }
+    }
+
+    .project__content2{
+        margin-left: 0;
+    }
+
+    .project__content:not(:last-child){
+        border-bottom: 1px solid #282B22;
+    }
+}
